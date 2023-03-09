@@ -15,17 +15,19 @@ class Main {
 }
 
 /*
+ *
  * [1, 2, 3, 4, 5, ...] -> Overflow
- * 
  * 
  * Linked List -> different memory location
  * 1 -> 2 -> 3 -> 4 -> null
  * head           tail
  *                     currentNode
  * 
- * Proceedure:
+ * Proceedure (Pust Method):
  * this.tail.next = newNode(2)
  * this.tail = newNode(2)
+ * 
+ * Proceedure (Pop method):
  * 
  * newNode.value = 1
  * newNode.next = null
@@ -33,4 +35,6 @@ class Main {
  * visual representation:
  * 1 -> null
  * 
+ * Java -> Class
+ * C -> struct
  */

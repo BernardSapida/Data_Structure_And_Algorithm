@@ -23,7 +23,7 @@ def get_median(B, A):
                 return (max(leftA, leftB) + min(rightA, rightB)) / 2
         elif leftA > rightB:
             high = midA - 1
-        elif leftB > rightA:
+        elif rightA < leftB:
             low = midB + 1
 
 print(get_median([4, 9, 11, 11, 12, 15], [1, 1, 3, 5, 10]))

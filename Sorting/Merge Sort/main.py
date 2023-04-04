@@ -1,5 +1,6 @@
 from math import floor
 
+# Time Complexity = O(n)
 def merge(list1, list2):
     sorted_list = []
     i = 0

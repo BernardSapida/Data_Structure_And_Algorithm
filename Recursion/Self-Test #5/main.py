@@ -1,4 +1,4 @@
-A = ['a', 'b', 'c', 'd', 'e']
+A = ['a', 'b', 'c']
 
 def traverse_characters(characters, i = 0):
     # base case

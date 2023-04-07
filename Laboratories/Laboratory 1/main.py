@@ -1,5 +1,5 @@
-# n, lo, hi = map(int, input().split())
-# L = list(map(int, input().split()))
+n, lo, hi = map(int, input().split())
+L = list(map(int, input().split()))
 
 def binary_search(arr, target, is_lo):
     def helper(lo, hi, target):
@@ -55,4 +55,4 @@ def get_range(lo, hi):
 # print(get_number_of_missing([1, 2, 4, 6, 7], 3, 5)) # 2
 # print(get_number_of_missing([1, 2, 4, 6, 7], -1, 0)) # 2
 # print(get_number_of_missing([1, 2, 4, 6, 7], 20, 28)) # 9
-print(get_number_of_missing([15, 21, 4, 8, 9, 7, 11, 30, 1, 17], -1, 3)) # 4
+# print(get_number_of_missing([15, 21, 4, 8, 9, 7, 11, 30, 1, 17], -1, 3)) # 4

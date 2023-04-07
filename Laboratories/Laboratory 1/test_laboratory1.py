@@ -21,7 +21,7 @@ class Test(unittest.TestCase):
         self.assertEqual(main.get_number_of_missing([1, 2, 4, 6, 7], 20, 28), 9) # 9
         
     def test_7(self):
-        self.assertEqual(main.get_number_of_missing([15, 21, 4, 8, 9, 7, 11, 30, 1, 17], -1, 3), 4) # 5
+        self.assertEqual(main.get_number_of_missing([15, 21, 4, 8, 9, 7, 11, 30, 1, 17], -1, 3), 4) # 4
 
 if __name__ == '__main__':
     unittest.main()

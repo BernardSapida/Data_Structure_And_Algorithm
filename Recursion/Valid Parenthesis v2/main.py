@@ -21,10 +21,10 @@ def isValid(str):
     
     return helper(arr, 0)
         
-print(isValid("(]"))
-print(isValid("()"))
-print(isValid("()[]{}"))
-print(isValid("([]{})"))
-print(isValid("((())"))
-print(isValid("[){]"))
-print(isValid("[({})]"))
+# print(isValid("(]"))
+# print(isValid("()"))
+# print(isValid("()[]{}"))
+# print(isValid("([]{})"))
+# print(isValid("((())"))
+# print(isValid("[){]"))
+# print(isValid("[({})]"))

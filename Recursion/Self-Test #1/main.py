@@ -1,5 +1,3 @@
-import math
-
 numbers = [1, 32, 13, 4, 25]
 
 def computeMaximum(arr):

@@ -1,5 +1,5 @@
-n, lo, hi = map(int, input().split())
-L = map(int, input().split())
+# n, lo, hi = map(int, input().split())
+# L = map(int, input().split())
 
 def binary_search(arr, target, is_lo):
     def helper(lo, hi, target):

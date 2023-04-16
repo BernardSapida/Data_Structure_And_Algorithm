@@ -1,25 +1,24 @@
 def lengthOfLastWord(s):
     length = 0
-    char_found = False
+    pos = len(s)-1
     
-    # This code is iterating through the string `s` backwards, starting from the last character. It
-    # checks if the current character is a space and if `char_found` is False, it continues to the
-    # next character. If the current character is a space and `char_found` is True, it breaks out of
-    # the loop. If the current character is not a space, it sets `char_found` to True and increments
-    # the `length` variable. The loop continues until a space is found after a non-space character or
-    # until the beginning of the string is reached. The function returns the length of the last word
-    # in the string.
-    for i in range(len(s)-1, -1, -1):
-        if s[i] == " " and not char_found:
-            continue
-        elif s[i] == " " and char_found:
-            break
-        else:
-            char_found = True
-            
+    # This while loop is used to skip any trailing spaces at the end of the input string `s`. It
+    # starts at the end of the string and decrements the `pos` variable until it reaches a non-space
+    # character. This ensures that the length of the last word is calculated correctly, without
+    # including any trailing spaces.
+    while s[pos] == " ":
+        pos -= 1
+    
+   
+   # This while loop is used to calculate the length of the last word in the input string `s`. It
+   # starts at the position of the last non-space character (which was found in the previous while
+   # loop that skipped any trailing spaces), and decrements the `pos` variable until it reaches the
+   # beginning of the string or a space character. For each non-space character encountered, the
+   # `length` variable is incremented. Once a space character is encountered or the beginning of the
+   # string is reached, the loop stops and the final value of `length` is returned as the length of
+   # the last word in the input string.
+    while pos >= 0 and s[pos] != " ":
         length += 1
+        pos -= 1
         
-    # `return length` is returning the value of the `length` variable, which represents the length of
-    # the last word in the input string `s`. This value is returned as the output of the
-    # `lengthOfLastWord` function.
     return length

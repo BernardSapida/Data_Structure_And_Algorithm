@@ -3,8 +3,8 @@
     #2 Pop /
     #3 Shift /
     #4 Unshift /
-    #5 Get -> index
-    #6 Set ->
+    #5 Get
+    #6 Set
     #7 Insert
     #8 Remove
     #9 Reverse

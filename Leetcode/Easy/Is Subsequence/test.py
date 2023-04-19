@@ -1,4 +1,4 @@
-import main    # The code to test
+import main       # The code to test
 import unittest   # The test framework
 
 class Test(unittest.TestCase):

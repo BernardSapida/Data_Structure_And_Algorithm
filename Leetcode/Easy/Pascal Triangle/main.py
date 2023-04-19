@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/pascals-triangle/
+
 def generate(numRows):
     rows = []
     

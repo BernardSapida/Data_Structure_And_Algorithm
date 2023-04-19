@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/is-subsequence/
+
 def isSubsequence(s, t):
     # This code checks if the length of the string `s` is equal to zero. If it is, it means that `s`
     # is an empty string, and therefore it is a subsequence of any string `t`. In this case, the

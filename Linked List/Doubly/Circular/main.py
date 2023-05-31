@@ -64,18 +64,23 @@ class CircularLinkedList:
         return True
     
     # index of node with value of
-    def indexOf(self, value) :
+    def indexOf(self, value):
         itr = self.head.next
+        old_finger_index = self.finger_index
+        self.finger_index = -1
         i = 0
         
         while itr != self.head:
+            self.finger_index += 1
+            
             if (itr.value == value):
                 self.finger = itr
                 return i
 
             itr = itr.next
             i += 1
-            
+        
+        self.finger_index = old_finger_index
         return -1
     
     # return True/False if value exists
@@ -130,32 +135,38 @@ class CircularLinkedList:
         if index >= self.finger_index:
             itr = self.finger
             
-            print("F FORWARD: " + str(self.finger_index))
+            # To track if it works perfectly (Uncomment to test)
+            # print("FROM FINGER FORWARD INDEX: " + str(self.finger_index))
             for _ in range(self.finger_index, index):
                 itr = itr.next
                 self.finger_index += 1
-                print("F FORWARD: " + str(self.finger_index))
+                # To track if it works perfectly (Uncomment to test)
+                # print("FROM FINGER FORWARD INDEX: " + str(self.finger_index))
          
         # traverse backward from finger
         elif self.finger_index - index <= index:
             itr = self.finger
             
-            print("F BACKWARD: " + str(self.finger_index))
+            # To track if it works perfectly (Uncomment to test)
+            # print("FROM FINGER BACKWARD INDEX: " + str(self.finger_index))
             for _ in range(self.finger_index, index, -1):
                 itr = itr.prev
                 self.finger_index -= 1
-                print("F BACKWARD: " + str(self.finger_index))
+                # To track if it works perfectly (Uncomment to test)
+                # print("FROM FINGER BACKWARD INDEX: " + str(self.finger_index))
                 
         # traverse forward from head
         else:
             itr = self.head    
             self.finger_index = -1
             
-            print("H FORWARD: " + str(self.finger_index))
+            # To track if it works perfectly (Uncomment to test)
+            # print("FROM HEAD FORWARD INDEX: " + str(self.finger_index))
             for _ in range(index + 1):
                 itr = itr.next
                 self.finger_index += 1
-                print("H FORWARD: " + str(self.finger_index))
+                # To track if it works perfectly (Uncomment to test)
+                # print("FROM HEAD FORWARD INDEX: " + str(self.finger_index))
 
         return itr
     
@@ -182,19 +193,42 @@ class CircularLinkedList:
     
     
 CLL = CircularLinkedList()
-CLL.add(1) # index: 0
-CLL.add(2) # index: 1
-CLL.add(3) # index: 2
-CLL.add(4) # index: 3
-CLL.add(5) # index: 4
 
-CLL.remove(4)
-CLL.remove(2)
-# print(CLL.head.prev.value)
+# Kindly uncomment below to test
 
-CLL.insert(0, 4)
+# CLL.insert(0, 1) # index: 0
+# CLL.insert(1, 2) # index: 1
+# CLL.insert(2, 3) # index: 2
+
+# CLL.add(4) # index: 3
+# CLL.add(5) # index: 4
+# CLL.add(6) # index: 5
+# CLL.add(7) # index: 6
+# CLL.add(8) # index: 7
+
+# CLL.remove(7)
+# CLL.remove(2)
+
+# CLL.removeValue(4)
+# CLL.removeValue(5)
+
+# CLL.get(0)
+# CLL.get(1)
+# CLL.get(2)
+
+# CLL.set(0, 11)
+# CLL.set(1, 12)
+# CLL.set(2, 13)
+
+# print(CLL.indexOf(4))
+# print(CLL.indexOf(5))
+# print(CLL.indexOf(6))
+
+# CLL.clear()
 
 print(CLL.toString())
 
 print(f"Finger Index: {CLL.indexOfBookmark()}")
-print(f"Finger Value: {CLL.getBookmark().value}")
+
+# Finger value is None if CLL is empty
+print(f"Finger Value: {CLL.getBookmark().value if CLL.getBookmark() != None else None}")

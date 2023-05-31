@@ -1,3 +1,14 @@
+/*
+ * 
+ * READ THIS NOTE:
+ * Sir naka python po ako, bali pa palitan nalang po ng extension .java to .py
+ * main.java -> main.py
+ * 
+ * Github Link for CLL: 
+ * https://github.com/BernardSapida/Data_Structure_And_Algorithm/blob/master/Linked%20List/Doubly/Circular/main.py
+ * 
+ */
+
 class Node:
     def __init__(self, value = None):
         self.value = value

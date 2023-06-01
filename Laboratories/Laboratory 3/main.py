@@ -20,7 +20,7 @@ def displayLineOfSight(L):
             if count >= value:
                 highest_count = output[highest_value_index]
 
-                if L[i] > highest_value:
+                if L[i+1] > highest_value:
                     output[i+1] = count + highest_count
                 else:
                     output[i+1] = count
@@ -40,7 +40,7 @@ def displayLineOfSight(L):
 
 # displayLineOfSight([3, 2, 1])
 # displayLineOfSight([1, 2, 3])
-# displayLineOfSight([5, 1, 2, 1, 3])
+displayLineOfSight([5, 1, 2, 1, 3])
 # displayLineOfSight([10, 3, 2, 10, 2, 1, 7])
 # displayLineOfSight([192, 163, 185, 165, 165, 170, 180])
-displayLineOfSight([10, 3, 2, 8, 2, 1, 7])
+# displayLineOfSight([10, 3, 2, 8, 2, 1, 7])

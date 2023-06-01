@@ -24,12 +24,12 @@ def displayLineOfSight(L):
                     output[i+1] = count + highest_count
                 else:
                     output[i+1] = count
+                count = 0
             else:
                 output[i+1] = value
 
             highest_value = L[i+1]
             highest_value_index = i+1
-            count = 0
 
     # print(L)
     # print(output)
